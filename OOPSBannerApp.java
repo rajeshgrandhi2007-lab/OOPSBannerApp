@@ -1,52 +1,23 @@
 public class OOPSBannerApp {
 
-    // Helper Method for O
-    public static String getOPattern() {
-        return String.join("\n",
-                " *** ",
-                "*   *",
-                "*   *",
-                "*   *",
-                "*   *",
-                "*   *",
-                " *** ");
-    }
-
-    // Helper Method for P
-    public static String getPPattern() {
-        return String.join("\n",
-                "**** ",
-                "*   *",
-                "*   *",
-                "**** ",
-                "*    ",
-                "*    ",
-                "*    ");
-    }
-
-    // Helper Method for S
-    public static String getSPattern() {
-        return String.join("\n",
-                " ****",
-                "*    ",
-                "*    ",
-                " *** ",
-                "    *",
-                "    *",
-                "**** ");
-    }
-
     public static void main(String[] args) {
 
-        String[] banner = {
-                getOPattern(),
-                getOPattern(),
-                getPPattern(),
-                getSPattern()
+        // Inline array initialization with String.join()
+        String[] lines = {
+
+            String.join("  ", " ***** ", " ***** ", " ***** ", " ***** "),
+            String.join("  ", "*     *", "*     *", "*     *", "*      "),
+            String.join("  ", "*     *", "*     *", "*     *", "*      "),
+            String.join("  ", "*     *", "*     *", " ***** ", " ***** "),
+            String.join("  ", "*     *", "*     * ","*      ", "      *"),
+            String.join("  ", "*     *", "*     * ","*      ", "      *"),
+            String.join("  ", " ***** ", " *****  ","*      ",  "******")
+
         };
 
-        for (String letter : banner) {
-            System.out.println(letter);
+        // Enhanced for loop to print banner
+        for (String line : lines) {
+            System.out.println(line);
         }
     }
 }
